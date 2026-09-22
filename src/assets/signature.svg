@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80">
+  <defs>
+    <linearGradient id="inkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F2B5C" />
+      <stop offset="50%" stop-color="#143A78" />
+      <stop offset="100%" stop-color="#0B192C" />
+    </linearGradient>
+  </defs>
+  <!-- Alex Morgan Handwritten Signature Path -->
+  <path d="M 25,52 C 32,32 38,15 46,14 C 52,13 51,32 46,55 C 44,60 55,42 62,38 C 67,35 69,45 74,44 C 77,43 82,34 86,45 C 90,52 93,42 100,41 C 104,41 106,47 112,46 C 120,44 116,22 126,18 C 132,15 136,32 133,52 C 131,58 141,36 148,34 C 153,32 155,44 160,42 C 165,40 168,33 175,41 C 182,49 187,40 195,38 C 205,36 215,48 222,46"
+        fill="none" stroke="url(#inkGrad)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Flourish Underline -->
+  <path d="M 38,62 C 75,56 140,58 185,63 C 200,65 215,62 205,58 C 190,54 165,60 145,64"
+        fill="none" stroke="#1E3E62" stroke-width="1.8" stroke-linecap="round" />
+</svg>

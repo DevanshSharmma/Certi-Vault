@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="sealGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF3D5" />
+      <stop offset="25%" stop-color="#D4AF37" />
+      <stop offset="60%" stop-color="#AA7C11" />
+      <stop offset="100%" stop-color="#594100" />
+    </linearGradient>
+    <linearGradient id="sealInnerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#0B192C" />
+    </linearGradient>
+    <filter id="sealShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Ribbons behind seal -->
+  <g transform="translate(100, 100)">
+    <polygon points="-25,45 -38,95 -20,85 0,95 -12,45" fill="#8C1D24" stroke="#D4AF37" stroke-width="1.5" />
+    <polygon points="12,45 0,95 20,85 38,95 25,45" fill="#A82831" stroke="#D4AF37" stroke-width="1.5" />
+  </g>
+
+  <!-- Seal Outer Sunburst/Star -->
+  <g transform="translate(100, 100)" filter="url(#sealShadow)">
+    <!-- 24-point gold star medallion -->
+    <path d="M 0,-70 L 10,-60 L 26,-67 L 31,-53 L 49,-52 L 48,-36 L 64,-28 L 57,-13 L 70,-1 L 58,11 L 65,27 L 50,34 L 51,51 L 34,52 L 29,67 L 13,62 L 0,72 L -13,62 L -29,67 L -34,52 L -51,51 L -50,34 L -65,27 L -58,11 L -70,-1 L -57,-13 L -64,-28 L -48,-36 L -49,-52 L -31,-53 L -26,-67 L -10,-60 Z" 
+          fill="url(#sealGoldGrad)" stroke="#AA7C11" stroke-width="1.2" />
+
+    <!-- Outer Gold Ring -->
+    <circle r="56" fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="1" />
+    <circle r="54" fill="#0B192C" stroke="url(#sealGoldGrad)" stroke-width="2" />
+    <circle r="44" fill="url(#sealGoldGrad)" stroke="#AA7C11" stroke-width="1" />
+    <circle r="41" fill="#0F172A" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="0.8" />
+
+    <!-- Center Checkmark & Shield -->
+    <path d="M 0,-25 L 18,-15 C 18,6 9,18 0,22 C -9,18 -18,6 -18,-15 Z" fill="url(#sealGoldGrad)" />
+    <path d="M 0,-22 L 15,-13 C 15,5 7,15 0,19 C -7,15 -15,5 -15,-13 Z" fill="#0B192C" />
+    <path d="M -7,-1 L -2,4 L 8,-6" fill="none" stroke="url(#sealGoldGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Text on Seal Ring -->
+    <path id="textCircleTop" d="M -46,0 A 46,46 0 0,1 46,0" fill="none" />
+    <text font-family="'Cinzel', serif" font-size="7.5" font-weight="700" fill="#FDFBF7" letter-spacing="2.2">
+      <textPath href="#textCircleTop" startOffset="50%" text-anchor="middle">CERTIVAULT • OFFICIAL</textPath>
+    </text>
+    <path id="textCircleBottom" d="M 46,0 A 46,46 0 0,1 -46,0" fill="none" />
+    <text font-family="'Cinzel', serif" font-size="7.5" font-weight="700" fill="#D4AF37" letter-spacing="2.2">
+      <textPath href="#textCircleBottom" startOffset="50%" text-anchor="middle">CERTIFIED • 2026</textPath>
+    </text>
+  </g>
+</svg>

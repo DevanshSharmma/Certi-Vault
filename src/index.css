@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --navy-950: #070F1E;
+    --navy-900: #0B192C;
+    --navy-850: #10243E;
+    --navy-800: #1E3E62;
+    --gold-500: #D4AF37;
+    --gold-600: #B38F3F;
+    --gold-400: #E5C158;
+    --gold-100: #FDF8ED;
+  }
+
+  body {
+    background-color: #F8FAFC;
+    color: #0F172A;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-signature {
+  font-family: 'Alex Brush', cursive, 'Brush Script MT', cursive;
+}
+
+/* Certificate aspect ratio container (A4 landscape is ~ 1.414:1) */
+.certificate-aspect-ratio {
+  aspect-ratio: 1.414 / 1;
+}
+
+/* Print Specific Rules */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide everything on page by default */
+  .no-print,
+  nav,
+  footer,
+  button,
+  .toast-container,
+  form,
+  .actions-toolbar {
+    display: none !important;
+  }
+
+  /* Reveal only the printable certificate container */
+  .printable-certificate-wrapper {
+    display: block !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 999999 !important;
+    background: white !important;
+  }
+
+  .certificate-canvas {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  @page {
+    size: A4 landscape;
+    margin: 0mm;
+  }
+}
